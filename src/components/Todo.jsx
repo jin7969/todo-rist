@@ -12,7 +12,7 @@ function Todo({ todo, onUpdate, onDelete }) {
   };
 
   return (
-    <li>
+    <li key={todo.id}>
       <input
         type="checkbox"
         id="checkbox"
