@@ -1,6 +1,7 @@
 import { useState } from "react";
-import AddTodo from "./AddTodo";
-import Todo from "./Todo";
+import AddTodo from "../AddTodo/AddTodo";
+import Todo from "../Todo/Todo";
+import styles from "./TodoList.module.css";
 
 const getFilteredTodo = (todos, filter) => {
   if (filter === "all") return todos;
@@ -24,8 +25,8 @@ export default function TodoList({ filter }) {
   const handleDelete = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filteredTodos.map((item) => (
           <Todo todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
         ))}
