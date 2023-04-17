@@ -22,7 +22,12 @@ function Todo({ todo, onUpdate, onDelete }) {
         checked={status === "completed"}
         onChange={onChangeCheckbox}
       />
-      <label htmlFor={id} className={styles.text}>
+      <label
+        htmlFor={id}
+        className={`${styles.text} ${
+          status === "completed" && styles.completed
+        }`}
+      >
         {text}
       </label>
       <span className={styles.icon}>
