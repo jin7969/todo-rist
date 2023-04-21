@@ -20,6 +20,10 @@
   color: var(--color-accent);
 }
 
+.mode {
+  animation: FadeIn 0.8s;
+}
+
 .filters {
   display: flex;
 }
@@ -44,4 +48,13 @@
   display: block;
   margin-top: 0.2rem;
   border: 1px solid var(--color-text);
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
